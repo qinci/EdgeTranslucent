@@ -1,11 +1,11 @@
 # EdgeTranslucence
 Android 任意View边沿渐变透明
 
-####代码简单，使用简单
+#### 代码简单，使用简单
 
-#####使用
+##### 使用
 * 引入库
-	* compile 'ren.qinc.edgetranslucent:lib:0.0.1'
+	* compile 'ren.qinc.edgetranslucent:lib:0.0.2'
 	
 * 布局
 

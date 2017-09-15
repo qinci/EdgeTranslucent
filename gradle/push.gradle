@@ -17,14 +17,13 @@
 //参考http://www.jianshu.com/p/0ba8960f80a9
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-version = "0.0.1"
+version = "0.0.2"
 
 def siteUrl = 'https://github.com/qinci/EdgeTranslucent'      // 项目的主页
 def gitUrl = 'https://github.com/qinci/EdgeTranslucent.git'   // Git仓库的url
 group = "ren.qinc.edgetranslucent"
 install {
     repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
         pom {
             project {
                 packaging 'aar'
@@ -39,7 +38,7 @@ install {
                 }
                 developers {
                     developer {
-                        id 'qinci'        //填写的一些基本信息
+                        id 'qinci'        
                         name '沈钦赐'
                         email 'qincis@gmail.com'
                     }
@@ -77,7 +76,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "EdgeTranslucent"    //发布到JCenter上的项目名字
+        name = "EdgeTranslucent"    
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
