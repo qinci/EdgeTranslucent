@@ -93,8 +93,7 @@ public class EdgeTransparentView extends FrameLayout {
         mPaint.setShader(new LinearGradient(0, 0, 0, drawSize, mGradientColors, mGradientPosition, Shader.TileMode.CLAMP));
     }
 
-
-    @Override
+   @Override
     protected boolean drawChild(Canvas canvas, View child, long drawingTime) {
         int layerSave = canvas.saveLayer(0, 0, getWidth(), getHeight(), null, Canvas.ALL_SAVE_FLAG);
         boolean drawChild = super.drawChild(canvas, child, drawingTime);
@@ -104,15 +103,15 @@ public class EdgeTransparentView extends FrameLayout {
 
         if (position == 0 || (position & bottomMask) != 0) {
             int save = canvas.save();
-            canvas.rotate(180, mWidth / 2, mHeight / 2);
+            canvas.rotate(180, mWidth / 2f, mHeight / 2f);
             canvas.drawRect(0, 0, mWidth, drawSize, mPaint);
             canvas.restoreToCount(save);
         }
 
-        int offset = (mHeight - mWidth) / 2;
+        float offset = (mHeight - mWidth) / 2f;
         if (position == 0 || (position & leftMask) != 0) {
             int saveCount = canvas.save();
-            canvas.rotate(90, mWidth / 2, mHeight / 2);
+            canvas.rotate(90, mWidth / 2f, mHeight / 2f);
             canvas.translate(0, offset);
             canvas.drawRect(0 - offset, 0, mWidth + offset, drawSize, mPaint);
             canvas.restoreToCount(saveCount);
@@ -120,7 +119,7 @@ public class EdgeTransparentView extends FrameLayout {
 
         if (position == 0 || (position & rightMask) != 0) {
             int saveCount = canvas.save();
-            canvas.rotate(270, mWidth / 2, mHeight / 2);
+            canvas.rotate(270, mWidth / 2f, mHeight / 2f);
             canvas.translate(0, offset);
             canvas.drawRect(0 - offset, 0, mWidth + offset, drawSize, mPaint);
             canvas.restoreToCount(saveCount);
