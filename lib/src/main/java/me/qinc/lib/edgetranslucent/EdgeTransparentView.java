@@ -111,7 +111,7 @@ public class EdgeTransparentView extends FrameLayout {
         float offset = (mHeight - mWidth) / 2f;
         if (position == 0 || (position & leftMask) != 0) {
             int saveCount = canvas.save();
-            canvas.rotate(90, mWidth / 2f, mHeight / 2f);
+            canvas.rotate(270, mWidth / 2f, mHeight / 2f);
             canvas.translate(0, offset);
             canvas.drawRect(0 - offset, 0, mWidth + offset, drawSize, mPaint);
             canvas.restoreToCount(saveCount);
@@ -119,7 +119,7 @@ public class EdgeTransparentView extends FrameLayout {
 
         if (position == 0 || (position & rightMask) != 0) {
             int saveCount = canvas.save();
-            canvas.rotate(270, mWidth / 2f, mHeight / 2f);
+            canvas.rotate(90, mWidth / 2f, mHeight / 2f);
             canvas.translate(0, offset);
             canvas.drawRect(0 - offset, 0, mWidth + offset, drawSize, mPaint);
             canvas.restoreToCount(saveCount);

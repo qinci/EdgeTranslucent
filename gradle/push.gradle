@@ -17,7 +17,7 @@
 //参考http://www.jianshu.com/p/0ba8960f80a9
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-version = "0.0.2"
+version = "0.0.3"
 
 def siteUrl = 'https://github.com/qinci/EdgeTranslucent'      // 项目的主页
 def gitUrl = 'https://github.com/qinci/EdgeTranslucent.git'   // Git仓库的url
